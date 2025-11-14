@@ -79,7 +79,7 @@ class _OnBoardingState extends State<OnBoarding> {
                         curve: Curves.easeInOut,
                       );
                     } else {
-                      // Navigator.pushReplacementNamed(context, Routes.signup);
+                      Navigator.pushReplacementNamed(context, PageRouteName.login);
                     }
                   },
                   style: ElevatedButton.styleFrom(
@@ -91,6 +91,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   child: Text(
                     "Continue",
                     style: TextStyle(
+                      fontFamily: "Arial",
                       fontSize: width * 0.045,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -142,6 +143,7 @@ class _OnBoardingState extends State<OnBoarding> {
               title,
               textAlign: TextAlign.center,
               style: AppColor.textblack.copyWith(fontSize: width * 0.05),
+
             ),
             SizedBox(height: height * 0.015),
 
