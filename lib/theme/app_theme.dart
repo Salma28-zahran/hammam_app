@@ -49,7 +49,9 @@ class AppColor {
 
 
 
-
+//mohamed added them ////////
+  static const Color gray500 = Color(0xFF6B7280);
+  static const Color gray900 = Color(0xFF111827);
 
 
 
