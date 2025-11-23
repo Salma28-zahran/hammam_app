@@ -195,13 +195,13 @@ class _OnBoardingState extends State<OnBoarding> {
                                 curve: Curves.easeInOut,
                               );
                             }
-                            /*
+
                             else {
                               Navigator.pushReplacementNamed(
-                                  context, Routes.signup);
+                                  context, PageRouteName.login);
                             }
 
-                             */
+
                           },
                           icon: Text(
                             _currentPage == 2

@@ -4,8 +4,15 @@ import 'package:hammam_app/theme/app_theme.dart';
 
 import '../../../../../core/route/routes.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -85,9 +92,9 @@ class LoginScreen extends StatelessWidget {
                       color: AppColor.gray900,
                     ),
                   ),
-                  SizedBox(height: height * 0.011),
+                  SizedBox(height: height * 0.010),
                   Text(
-                    "Enter your phone number to receive a verification code",
+                    "Enter your email to receive a verification code",
                     style: TextStyle(
                       fontFamily: "Arial",
                       fontSize: 14,
@@ -95,12 +102,12 @@ class LoginScreen extends StatelessWidget {
                       color: AppColor.gray500,
                     ),
                   ),
-                  SizedBox(height: height * 0.03),
+                  SizedBox(height: height * 0.025),
                   Text(
                     "Email",
                     style: TextStyle(
                       fontFamily: "Arial",
-                      fontSize: 18,
+                      fontSize: 14,
                       fontWeight: FontWeight.w400,
                       color: AppColor.gray900,
                     ),
@@ -132,7 +139,54 @@ class LoginScreen extends StatelessWidget {
                       fillColor: Color(0xFFF3F4F6),
                     ),
                   ),
+                  SizedBox(height: height * 0.025),
+                  Text(
+                    "Password",
+                    style: TextStyle(
+                      fontFamily: "Arial",
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: AppColor.gray900,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  TextField(
+                    obscureText: _obscurePassword,
+                    keyboardType: TextInputType.visiblePassword,
+                    decoration: InputDecoration(
+                      hintText: "Enter Password",
+                      hintStyle: TextStyle(
+                        fontFamily: "Arial",
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: AppColor.gray500,
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock_outline,
+                        color: AppColor.gray500,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _obscurePassword
+                              ? Icons.visibility_off_outlined
+                              : Icons.visibility_outlined,
+                          color: AppColor.gray500,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _obscurePassword = !_obscurePassword;
+                          });
+                        },
+                      ),
 
+                      filled: true,
+                      fillColor: const Color(0xFFF3F4F6),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(18),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
                   SizedBox(height: height * 0.025),
                   Container(
                     width: double.infinity,
@@ -169,7 +223,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(height: 40),
+                  SizedBox(height: height * 0.035),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -200,7 +254,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: height * 0.045),
+                  SizedBox(height: height * 0.035),
 
                   Container(
                     width: double.infinity,
@@ -238,7 +292,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 30),
+            SizedBox(height: 20),
 
             Text(
               "🚀 Quick Demo Mode (Skip Auth)",
@@ -249,7 +303,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 35),
+            SizedBox(height: 10),
 
             Column(
               children: [
