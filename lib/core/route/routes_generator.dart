@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hammam_app/core/route/routes.dart';
+import 'package:hammam_app/features/auth/forget_pass/presentation/views/email.dart';
 import 'package:hammam_app/features/onboarding/OnBoarding.dart';
 
 import '../../features/auth/login/presentation/view/login_screen.dart';
@@ -19,6 +20,12 @@ class RoutesGenerator {
              builder: (context) => const LoginScreen(),
              settings: settings,
            );
+
+      case PageRouteName.email:
+        return MaterialPageRoute(
+          builder: (context) => const Email(),
+          settings: settings,
+        );
 
 
 
