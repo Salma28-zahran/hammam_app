@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../../core/route/routes.dart';
 import '../../../../../../theme/app_theme.dart';
 
-class SignupScreen extends StatelessWidget {
+class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
+
+  @override
+  State<SignupScreen> createState() => _SignupScreenState();
+
+}
+
+class _SignupScreenState extends State<SignupScreen> {
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Color(0xFFF3F4F6),
       appBar: AppBar(
@@ -81,8 +89,7 @@ class SignupScreen extends StatelessWidget {
                         fontFamily: "Arial",
                         fontWeight: FontWeight.w400,
                         fontSize: 16,
-                          color: AppColor.gray500,
-
+                        color: AppColor.gray500,
                       ),
                       prefixIcon: Icon(
                         Icons.person_outline,
@@ -104,8 +111,7 @@ class SignupScreen extends StatelessWidget {
                       fontFamily: "Arial",
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
-                        color: AppColor.gray900,
-
+                      color: AppColor.gray900,
                     ),
                   ),
                   SizedBox(height: 8),
@@ -136,28 +142,78 @@ class SignupScreen extends StatelessWidget {
                   Text(
                     "Phone Number (Optional)",
                     style: TextStyle(
-                        fontFamily: "Arial",
-                        fontWeight: FontWeight.w400,fontSize: 14,
+                      fontFamily: "Arial",
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
                       color: AppColor.gray900,
-
                     ),
                   ),
                   SizedBox(height: 8),
                   TextField(
                     keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
-                      hintText: "+1 (555) 000-0000",hintStyle: TextStyle(
-                      fontFamily: "Arial",
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: AppColor.gray500,
-                    ),
+                      hintText: "+1 (555) 000-0000",
+                      hintStyle: TextStyle(
+                        fontFamily: "Arial",
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: AppColor.gray500,
+                      ),
                       prefixIcon: Icon(
                         Icons.phone_outlined,
                         color: AppColor.gray500,
                       ),
                       filled: true,
                       fillColor: Color(0xFFF3F4F6),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(18),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+
+                  Text(
+                    "Password",
+                    style: TextStyle(
+                      fontFamily: "Arial",
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                      color: AppColor.gray900,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  TextField(
+                    obscureText: _obscurePassword,
+                    keyboardType: TextInputType.visiblePassword,
+                    decoration: InputDecoration(
+                      hintText: "Enter Password",
+                      hintStyle: TextStyle(
+                        fontFamily: "Arial",
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: AppColor.gray500,
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock_outline,
+                        color: AppColor.gray500,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _obscurePassword
+                              ? Icons.visibility_off_outlined
+                              : Icons.visibility_outlined,
+                          color: AppColor.gray500,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _obscurePassword = !_obscurePassword;
+                          });
+                        },
+                      ),
+
+                      filled: true,
+                      fillColor: const Color(0xFFF3F4F6),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(18),
                         borderSide: BorderSide.none,
@@ -188,7 +244,10 @@ class SignupScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 16),
                         elevation: 0,
                       ),
-                      onPressed: () {},
+                      onPressed: () => Navigator.pushReplacementNamed(
+                        context,
+                        PageRouteName.otp,
+                      ),
                       child: Text(
                         "Continue",
                         style: TextStyle(
