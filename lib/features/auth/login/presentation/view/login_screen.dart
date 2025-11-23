@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hammam_app/core/resources/app_assets_manager.dart';
 import 'package:hammam_app/theme/app_theme.dart';
 
@@ -132,8 +133,31 @@ class LoginScreen extends StatelessWidget {
                       fillColor: Color(0xFFF3F4F6),
                     ),
                   ),
+                  SizedBox(height: height * 0.001),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, PageRouteName.email);
+
+                    },
+                    child: Text(
+                      "forgot_password?",
+                      style: GoogleFonts.montserrat(
+                        color: Colors.blue,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        decoration: TextDecoration.underline,
+                        decorationColor: Colors.blue,
+                      ),
+                    ),
+                  ),
+
+
+
 
                   SizedBox(height: height * 0.025),
+
+
+
                   Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
