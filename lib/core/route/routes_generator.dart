@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hammam_app/core/route/routes.dart';
+import 'package:hammam_app/features/auth/forget_pass/presentation/views/newpass.dart';
+import 'package:hammam_app/features/auth/forget_pass/presentation/views/otp2_screen.dart';
 import 'package:hammam_app/features/auth/register/login/presentation/view/otp_screen.dart';
 import 'package:hammam_app/features/auth/forget_pass/presentation/views/email.dart';
-]import 'package:hammam_app/features/onboarding/OnBoarding.dart';
+import 'package:hammam_app/features/onboarding/OnBoarding.dart';
 
 import '../../features/auth/login/presentation/view/login_screen.dart';
 import '../../features/auth/register/login/presentation/view/register_screen.dart';
@@ -26,10 +28,20 @@ class RoutesGenerator {
           builder: (context) => const OtpScreen(),
           settings: settings,
         );
+      case PageRouteName.otp2:
+        return MaterialPageRoute(
+          builder: (context) => const Otp2Screen(),
+          settings: settings,
+        );
 
       case PageRouteName.email:
         return MaterialPageRoute(
           builder: (context) => const Email(),
+          settings: settings,
+        );
+      case PageRouteName.newpass:
+        return MaterialPageRoute(
+          builder: (context) => const Newpass(),
           settings: settings,
         );
 

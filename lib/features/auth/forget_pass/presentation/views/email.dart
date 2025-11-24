@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hammam_app/core/resources/app_assets_manager.dart';
+import 'package:hammam_app/core/route/routes.dart';
 import 'package:hammam_app/theme/app_theme.dart';
 
 class Email extends StatelessWidget {
@@ -89,7 +90,9 @@ class Email extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 16),
                   elevation: 0,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, PageRouteName.otp2);
+                },
                 child: Text(
                   "Continue",
                   style: TextStyle(
