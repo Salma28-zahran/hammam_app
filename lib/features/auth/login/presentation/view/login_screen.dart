@@ -235,7 +235,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         elevation: 0,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, PageRouteName.main);
+                      },
                       child: const Text(
                         "Continue",
                         style: TextStyle(
