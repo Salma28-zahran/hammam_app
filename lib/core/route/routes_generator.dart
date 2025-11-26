@@ -5,6 +5,7 @@ import 'package:hammam_app/features/auth/forget_pass/presentation/views/otp2_scr
 import 'package:hammam_app/features/auth/register/login/presentation/view/otp_screen.dart';
 import 'package:hammam_app/features/auth/forget_pass/presentation/views/email.dart';
 import 'package:hammam_app/features/onboarding/OnBoarding.dart';
+import 'package:hammam_app/features/tabs/presentations/views/main.dart';
 
 import '../../features/auth/login/presentation/view/login_screen.dart';
 import '../../features/auth/register/login/presentation/view/register_screen.dart';
@@ -42,6 +43,12 @@ class RoutesGenerator {
       case PageRouteName.newpass:
         return MaterialPageRoute(
           builder: (context) => const Newpass(),
+          settings: settings,
+        );
+
+      case PageRouteName.main:
+        return MaterialPageRoute(
+          builder: (context) => const Main(),
           settings: settings,
         );
 

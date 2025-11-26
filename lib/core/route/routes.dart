@@ -5,6 +5,8 @@ class PageRouteName{
   static const String otp2 = '/otp2';
   static const String email = '/email';
   static const String newpass = '/newpass';
+  static const String main = '/main';
+
 
 
 
