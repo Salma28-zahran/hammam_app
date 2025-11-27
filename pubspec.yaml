@@ -38,6 +38,7 @@ dependencies:
   flutter_native_splash: ^2.4.7
   flutter_onboarding_slider: ^1.0.11
   easy_localization: ^3.0.8
+  font_awesome_flutter: ^10.12.0
 
 dev_dependencies:
   flutter_test:

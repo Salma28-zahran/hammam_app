@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hammam_app/features/tabs/presentations/views/menu.dart';
+import 'package:hammam_app/features/tabs/presentations/widgets/app_bar.dart';
 import 'package:hammam_app/features/tabs/presentations/widgets/bottom_nav_bar.dart';
 
 class Main extends StatefulWidget {
@@ -15,7 +17,7 @@ class _MainState extends State<Main> {
     Center(child: Text("Home Screen")),
     Center(child: Text("Orders Screen")),
     Center(child: Text("Saved Screen")),
-    Center(child: Text("Account Screen")),
+   const Menu(),
   ];
 
   void _onTap(int index) {
@@ -27,9 +29,7 @@ class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Main Screen"),
-      ),
+      appBar: CustomAppBar(),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavBar(
         currentIndex: _currentIndex,

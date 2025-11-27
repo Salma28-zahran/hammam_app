@@ -127,8 +127,8 @@ class AppColor {
   static TextStyle textgrey =GoogleFonts.inter(
       fontSize: 14, color: AppColor.grey, fontWeight: FontWeight.w400);
 
-  static TextStyle textblack =GoogleFonts.inter(
-      fontSize: 16, color: AppColor.black, fontWeight: FontWeight.w600);
+  static TextStyle textblack =TextStyle(
+      fontSize: 16, color: AppColor.black, fontWeight: FontWeight.w600,fontFamily: "Arial");
 
   static TextStyle textprimary =GoogleFonts.inter(
       fontSize: 12, color: AppColor.primary, fontWeight: FontWeight.w400);
