@@ -6,6 +6,9 @@ class PageRouteName{
   static const String email = '/email';
   static const String newpass = '/newpass';
   static const String main = '/main';
+  static const String menu = '/menu';
+
+
 
 
 
