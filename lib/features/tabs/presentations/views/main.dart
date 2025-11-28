@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hammam_app/features/tabs/presentations/views/home/homeScreen.dart';
 import 'package:hammam_app/features/tabs/presentations/views/menu.dart';
 import 'package:hammam_app/features/tabs/presentations/widgets/app_bar.dart';
 import 'package:hammam_app/features/tabs/presentations/widgets/bottom_nav_bar.dart';
@@ -15,7 +16,7 @@ class _MainState extends State<Main> {
 
   final List<Widget> _screens = [
     Center(child: Text("Home Screen")),
-    Center(child: Text("Orders Screen")),
+    HomeScreen(),
     Center(child: Text("Saved Screen")),
    const Menu(),
   ];
@@ -29,6 +30,7 @@ class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: CustomAppBar(),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavBar(
