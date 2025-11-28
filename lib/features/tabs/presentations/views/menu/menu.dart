@@ -129,7 +129,8 @@ class Menu extends StatelessWidget {
 
               Padding(
                 padding: EdgeInsets.all(w * 0.02),
-                child: Container(
+                child:
+                Container(
                   width: double.infinity,
                   height: h * 0.06,
                   decoration: BoxDecoration(

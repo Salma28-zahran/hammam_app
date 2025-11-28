@@ -133,8 +133,8 @@ class AppColor {
   static TextStyle textprimary =GoogleFonts.inter(
       fontSize: 12, color: AppColor.primary, fontWeight: FontWeight.w400);
 
-  static TextStyle textwhite =GoogleFonts.plusJakartaSans(
-      fontSize: 16, color: AppColor.white, fontWeight: FontWeight.w800);
+  static TextStyle textwhite =TextStyle(
+      fontSize: 16, color: AppColor.white, fontWeight: FontWeight.w500,fontFamily: "Arial");
 
 
 
