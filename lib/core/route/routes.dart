@@ -7,6 +7,8 @@ class PageRouteName{
   static const String newpass = '/newpass';
   static const String main = '/main';
   static const String menu = '/menu';
+  static const String trip = '/trip';
+
 
 
 

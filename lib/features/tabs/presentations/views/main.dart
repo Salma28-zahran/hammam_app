@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hammam_app/features/tabs/presentations/views/home/homeScreen.dart';
-import 'package:hammam_app/features/tabs/presentations/views/menu.dart';
+import 'package:hammam_app/features/tabs/presentations/views/menu/menu.dart';
+import 'package:hammam_app/features/tabs/presentations/views/my%20trips/my_trip.dart';
 import 'package:hammam_app/features/tabs/presentations/widgets/app_bar.dart';
 import 'package:hammam_app/features/tabs/presentations/widgets/bottom_nav_bar.dart';
 
@@ -15,7 +16,7 @@ class _MainState extends State<Main> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    Center(child: Text("Home Screen")),
+   const MyTrip(),
     HomeScreen(),
     Center(child: Text("Saved Screen")),
    const Menu(),
