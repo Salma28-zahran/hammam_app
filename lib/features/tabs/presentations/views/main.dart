@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hammam_app/features/tabs/presentations/views/home/homeScreen.dart';
+import 'package:hammam_app/features/tabs/presentations/views/home/home.dart';
+import 'package:hammam_app/features/tabs/presentations/views/marketplace/marketplace.dart';
 import 'package:hammam_app/features/tabs/presentations/views/menu/menu.dart';
 import 'package:hammam_app/features/tabs/presentations/views/my%20trips/my_trip.dart';
 import 'package:hammam_app/features/tabs/presentations/widgets/app_bar.dart';
@@ -17,9 +18,9 @@ class _MainState extends State<Main> {
 
   final List<Widget> _screens = [
    const MyTrip(),
-    HomeScreen(),
-    Center(child: Text("Saved Screen")),
-   const Menu(),
+    const Home(),
+    const Marketplace(),
+    const Menu(),
   ];
 
   void _onTap(int index) {
