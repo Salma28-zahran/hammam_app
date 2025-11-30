@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:hammam_app/core/resources/app_assets_manager.dart';
 import 'package:hammam_app/theme/app_theme.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColor.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -115,8 +115,8 @@ class HomeScreen extends StatelessWidget {
                 shrinkWrap: true,
                 crossAxisCount: 2,
                 physics:  NeverScrollableScrollPhysics(),
-                crossAxisSpacing: 12,
-                mainAxisSpacing: 12,
+                crossAxisSpacing: 15,
+                mainAxisSpacing: 15,
                 childAspectRatio: 1.12,
                 children: [
                   _homeCard(
